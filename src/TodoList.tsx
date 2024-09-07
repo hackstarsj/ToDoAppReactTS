@@ -5,8 +5,9 @@ const TodoList = (props: TodoListProps) => {
     <ul>
       {props?.items?.map((item: ItemProps) => (
         <TodoItem
+          key={item.id}
           {...item}
-          onMarkCompleted={props.onMarkCompleted}
+          onMarkCompleted={props.onMarkCompleted} // Correct function signature
           onDelete={props.onDelete}
         />
       ))}
