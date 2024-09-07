@@ -1,0 +1,81 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  box-shadow: 3px 3px 3px grey;
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.success {
+  background-color: green;
+  border: 1px solid green;
+  width: 100px;
+  flex-grow: 1;
+}
+
+button.error {
+  background-color: red;
+  border: 1px solid red;
+  width: 100px;
+  flex-grow: 1;
+}
+.btn-group {
+  display: block;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  background-color: greenyellow;
+  margin: 5px;
+  border-radius: 5px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+ul li p {
+  flex-grow: 7;
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.form {
+  display: flex;
+}
+.form button {
+  flex-grow: 1;
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+h2 {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+  margin-top: 0px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+button.primary {
+  background-color: dodgerblue;
+  flex-grow: 1;
+  border: 1px solid dodgerblue;
+}
