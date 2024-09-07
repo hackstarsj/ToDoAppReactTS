@@ -8,12 +8,12 @@ const TodoItem = (props: ItemProps) => {
         ) : (
           <button
             className="success"
-            onClick={() => props.onMarkCompleted(props.id)}
+            onClick={() => props?.onMarkCompleted?.(props?.id)}
           >
             Mark Completed
           </button>
         )}
-        <button className="error" onClick={() => props.onDelete(props.id)}>
+        <button className="error" onClick={() => props?.onDelete?.(props?.id)}>
           Delete
         </button>
       </div>

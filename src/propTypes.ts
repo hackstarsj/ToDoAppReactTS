@@ -3,8 +3,8 @@ interface ItemProps {
   todo: string;
   completed: boolean;
   userId: Number;
-  onMarkCompleted?: Function;
-  onDelete?: Function;
+  onMarkCompleted: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
 interface AddItemProps {
@@ -13,8 +13,8 @@ interface AddItemProps {
 
 interface TodoListProps {
   items: any;
-  onMarkCompleted: Function;
-  onDelete?: Function;
+  onMarkCompleted: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
 interface SortProps {
