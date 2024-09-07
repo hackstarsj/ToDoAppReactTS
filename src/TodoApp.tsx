@@ -5,9 +5,11 @@ import FilterItems from "./FilterItems";
 
 const TodoApp = () => {
   const getItems = () => {
-    if (localStorage.getItem("todolist")) {
+    const storedItems = localStorage.getItem("todolist");
+
+    if (storedItems) {
       try {
-        return JSON.parse(localStorage.getItem("todolist"));
+        return JSON.parse(storedItems);
       } catch (error) {
         return [];
       }
@@ -26,7 +28,7 @@ const TodoApp = () => {
     setFilterItems(items);
   }, [items]);
 
-  const onFilterBy = (data) => {
+  const onFilterBy = (data: string) => {
     if (data === "all") {
       setFilterItems(items);
     } else if (data == "pending") {
@@ -38,15 +40,15 @@ const TodoApp = () => {
     }
   };
 
-  const markCompleted = (id) => {
-    const updatedItems = items.map((item) =>
+  const markCompleted = (id: string) => {
+    const updatedItems = items.map((item: any) =>
       item.id === id ? { ...item, completed: true } : item
     );
     setItems(updatedItems);
   };
 
-  const deleteItem = (id) => {
-    const updatedItems = items.filter((item) => item.id !== id);
+  const deleteItem = (id: string) => {
+    const updatedItems = items.filter((item: any) => item.id !== id);
     setItems(updatedItems);
   };
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const AddTodo = (props: AddItemProps) => {
   const [value, setValue] = useState("");
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<any>(null);
 
   const generateUniqueId = () => {
     return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);

@@ -13,6 +13,8 @@ interface AddItemProps {
 
 interface TodoListProps {
   items: any;
+  onMarkCompleted: Function;
+  onDelete?: Function;
 }
 
 interface SortProps {
